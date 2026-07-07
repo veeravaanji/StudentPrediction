@@ -84,45 +84,7 @@ def predict():
         time = now.strftime("%I:%M %p")
 
         # Save to database
-        conn = sqlite3.connect("student.db")
-        cursor = conn.cursor()
-
-        cursor.execute("""
-    INSERT INTO predictions (
-        student_name,
-        student_id,
-        gender,
-        study_hours,
-        attendance,
-        sleep_hours,
-        past_exam_score,
-        internet_access,
-        extracurricular,
-        prediction,
-        confidence,
-        date,
-        time
-    )
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-""", (
-    student_name,
-    student_id,
-    "Male" if gender == 1 else "Female",
-    study_hours,
-    attendance,
-    sleep_hours,
-    past_exam_score,
-    "Yes" if internet_access == 1 else "No",
-    "Yes" if extracurricular == 1 else "No",
-    result,
-    confidence,
-    date,
-    time
-))
-
-        conn.commit()
-        conn.close()
-
+       
         print("Prediction:", result)
         print("Confidence:", confidence)
 
