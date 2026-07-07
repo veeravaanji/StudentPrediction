@@ -1,37 +1,37 @@
-import sqlite3
+#import sqlite3
 
-conn = sqlite3.connect("student.db")
-cursor = conn.cursor()
+#conn = sqlite3.connect("student.db")
+#cursor = conn.cursor()
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS predictions (
+#cursor.execute("""
+#CREATE TABLE IF NOT EXISTS predictions (
 
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+ #   id INTEGER PRIMARY KEY AUTOINCREMENT,
 
-    student_name TEXT,
-    student_id TEXT,
+  #  student_name TEXT,
+   # student_id TEXT,
 
-    gender TEXT,
+    #gender TEXT,
 
-    study_hours REAL,
-    attendance REAL,
-    sleep_hours REAL,
+    #study_hours REAL,
+    #attendance REAL,
+    #sleep_hours REAL,
 
-    past_exam_score REAL,
+    #past_exam_score REAL,
 
-    internet_access TEXT,
-    extracurricular TEXT,
+    #internet_access TEXT,
+    #extracurricular TEXT,
 
-    prediction TEXT,
-    confidence REAL,
+   # prediction TEXT,
+    #confidence REAL,
 
-    date TEXT,
-    time TEXT
+    #date TEXT,
+    #time TEXT
 
-)
-""")
+#)
+#""")
 
-conn.commit()
-conn.close()
+#conn.commit()
+#conn.close()
 
-print("Database Created Successfully")
+#print("Database Created Successfully")
